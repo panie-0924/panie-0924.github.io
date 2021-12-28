@@ -1,60 +1,82 @@
 ---
-layout: default
+layout: base
 ---
 
-<article class="post">
+{% include header.html type="post" %}
 
-    <div class="post__title">
-        <h1 class="post__title__text">{{ page.title }}</h1>
-    </div>
-    <div class="post__meta"> 
-        <div class="post__meta__category">
-            {% for category in page.category %}
-                <p class="post__meta__category__title" style="background: {{ site.category | where: "category", category | map: "hue"}}">{{ site.category | where: "category", category | map: "title"}}</p>
-            {% else %}
-                <p class="post__meta__category__title">No category</p>
+<div class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}">
+  <div class="row">
+    <div class="{% if page.full-width %} col {% else %} col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 {% endif %}">
+
+      {% if page.gh-repo %}
+        {% assign gh_split =  page.gh-repo | split:'/'  %}
+        {% assign gh_user =  gh_split[0]  %}
+        {% assign gh_repo =  gh_split[1]  %}
+
+        <div id="header-gh-btns">
+          {% if page.gh-badge.size > 0 %}
+            {% for badge in page.gh-badge %}
+              {% case badge %}
+                {% when 'star'%}
+                  <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&repo={{ gh_repo }}&type=star&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
+                {% when 'watch'%}
+                  <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&repo={{ gh_repo }}&type=watch&v=2&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
+                {% when 'fork'%}
+                  <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&repo={{ gh_repo }}&type=fork&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
+                {% when 'follow'%}
+                  <iframe src="https://ghbtns.com/github-btn.html?user={{ gh_user }}&type=follow&count=true" frameborder="0" scrolling="0" width="220px" height="20px"></iframe>
+              {% endcase %}
             {% endfor %}
+          {% endif %}
         </div>
-        <p class="post__meta__divider">·</p>
-        <div class="post__meta__date">
-            {{ page.date | date: '%B %d, %Y' }}
-        </div>
-        {% if page.author != nil %}
-            {% assign author = site.authors | where: "nick", page.author | first %}
-            <p class="post__meta__divider">·</p>
-            <div class="post__meta__author">
-                <p>by </p>
-                <img class="post__meta__author__photo" src="{{ site.url }}/{{ author.photo_dir }}"/>
-                <p>{{ author.full_name }}</p>
-            </div>
-        {% endif %}
-    </div>
+      {% endif %}
 
-    {% if page.prevPart != nil or page.nextPart != nil %}
-        <div class="post__navigator">
-            <div
-                class="post__navigator__buttons"
-                {% if page.prevPart == nil %}
-                    style="justify-content: flex-end;"
-                {% endif %}
-            >
-                {% if page.prevPart != nil %}
-                    <a href="{% link {{ page.prevPart }} %}">
-                        <img  class="arrow-left" src="{{ site.url }}/assets/img/icons/arrow_left.svg"/>
-                        Previous
-                    </a>
-                {% endif %}
-                {% if page.nextPart != nil %}
-                    <a href="{% link {{ page.nextPart }} %}">
-                        Next
-                        <img class="arrow-right" src="{{ site.url }}/assets/img/icons/arrow_right.svg"/>
-                    </a>
-                {% endif %}
-            </div>
+      {% if page.before-content %}
+        <div class="before-content">
+          {% for file in page.before-content %}
+            {% include {{ file }} %}
+          {% endfor %}
         </div>
-    {% endif %}
+      {% endif %}
 
-    <div class="post__content">
+      <article role="main" class="blog-post">
         {{ content }}
+      </article>
+
+      {% if page.tags.size > 0 %}
+        <div class="blog-tags">
+          <span>Tags:</span>
+          {% for tag in page.tags %}
+            <a href="{{ '/tags' | relative_url }}#{{- tag -}}">{{- tag -}}</a>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      {% if page.after-content %}
+        <div class="after-content">
+          {% for file in page.after-content %}
+            {% include {{ file }} %}
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      {% if page.social-share %}
+        {% include social-share.html %}
+      {% endif %}
+
+      <ul class="pagination blog-pager">
+        {% if page.previous.url %}
+        <li class="page-item previous">
+          <a class="page-link" href="{{ page.previous.url | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title | strip_html | xml_escape}}">&larr; Previous Post</a>
+        </li>
+        {% endif %}
+        {% if page.next.url %}
+        <li class="page-item next">
+          <a class="page-link" href="{{ page.next.url | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title | strip_html | xml_escape}}">Next Post &rarr;</a>
+        </li>
+        {% endif %}
+      </ul>
+      {% include comments.html %}
     </div>
-</article>
+  </div>
+</div>
