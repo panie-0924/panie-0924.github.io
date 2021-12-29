@@ -7,13 +7,13 @@ tags: win10 pytorch conda git 深度学习
 
 ​	**win10**：Windows操作系统。
 
-​	**VSCode**：一款最常用的代码编辑器。下载地址： https://code.visualstudio.com/download ****
+​	**VSCode**：一款最常用的代码编辑器。[下载地址](https://code.visualstudio.com/download ) 
 
 ​	**pytorch**：PyTorch是facebook推出的一个Python的开源机器学习库，前身是由Lua语言开发的torch这个机器学习框架。近几年广受学术界和工业界的热捧。
 
-​	**cnoda**：conda是一个环境包，方便用于环境的管理，适用于多种语言，如：python、R、Java、Javascript、C/C++等等。下载地址： https://www.anaconda.com/products/individual 
+​	**cnoda**：conda是一个环境包，方便用于环境的管理，适用于多种语言，如：python、R、Java、Javascript、C/C++等等。[下载地址](https://www.anaconda.com/products/individual )
 
-​	**git**：用于分布式版本系统的控制管理。下载地址： https://git-scm.com/downloads 
+​	**git**：用于分布式版本系统的控制管理。[下载地址](https://git-scm.com/downloads )
 
 #	安装步骤
 
@@ -25,7 +25,7 @@ tags: win10 pytorch conda git 深度学习
 
 ​	**1、打开anaconda prompt**
 
-​		![1640746150554](https://github.com/panie-0924/panie-0924.github.io\typora-user-images\1640746150554.png)
+​		![1640746150554](https://github.com/panie-0924/panie-0924.github.io/blob/main/typora-user-images/1640746150554.png)
 
 ​	**2、创建并切换到工作目录**
 
@@ -43,13 +43,13 @@ tags: win10 pytorch conda git 深度学习
 
 ​		`conda info -e`
 
-​		![1640747018723](https://github.com/panie-0924/panie-0924.github.io\typora-user-images\1640747018723.png)
+​		![1640747018723](https://github.com/panie-0924/panie-0924.github.io/blob/main/typora-user-images/1640747018723.png)
 
 ​	**4、启动Pytorch Anaconda虚拟环境**
 
 ​		`activate mmlab`
 
-​		![1640747177011](https://github.com/panie-0924/panie-0924.github.io\typora-user-images\1640747177011.png)
+​		![1640747177011](https://github.com/panie-0924/panie-0924.github.io/blob/main/typora-user-images/1640747177011.png)
 
 ​	**5、安装pytorch**
 
@@ -57,7 +57,7 @@ tags: win10 pytorch conda git 深度学习
 
 ​		详细版本可以自己选择：
 
-​		![1640747363531](https://github.com/panie-0924/panie-0924.github.io\typora-user-images\1640747363531.png)
+​		![1640747363531](https://github.com/panie-0924/panie-0924.github.io/blob/main/typora-user-images/1640747363531.png)
 
 ​		 `conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch `
 
