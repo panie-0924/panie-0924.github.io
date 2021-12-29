@@ -13,7 +13,7 @@ tags: win10 pytorch conda git 深度学习
 
 ​	**cnoda**：conda是一个环境包，方便用于环境的管理，适用于多种语言，如：python、R、Java、Javascript、C/C++等等。[下载地址](https://www.anaconda.com/products/individual )
 
-​	**git**：用于分布式版本系统的控制管理。[下载地址](https://git-scm.com/downloads )
+​	**git**：用于分布式版本系统的控制管理。在深度学习的过程中，我们会经常用到git上的一些开源项目；并且我们自己的项目也可以放在git上，方便项目管理。[下载地址](https://git-scm.com/downloads )
 
 #	安装步骤
 
@@ -65,7 +65,11 @@ tags: win10 pytorch conda git 深度学习
 
 ​		 `conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch `
 
+## 第三步：安装git
 
+​	![1640762599393](https://github.com/panie-0924/panie-0924.github.io/blob/4b0fb729346b9192b45810bc2ad481fb388dbaf9/typora-user-images/1640762599393.png)
+
+​		上述界面选择使用vscode作为默认编辑器，其他无脑安装。
 
 <!--more-->
 
