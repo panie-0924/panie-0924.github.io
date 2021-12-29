@@ -25,7 +25,7 @@ tags: win10 pytorch conda git 深度学习
 
 ​	**1、打开anaconda prompt**
 
-​		![1640746150554](https://github.com/panie-0924/panie-0924.github.io/blob/4b0fb729346b9192b45810bc2ad481fb388dbaf9/typora-user-images/1640746150554.png)
+​		![1640746150554](https://github.com/panie-0924/panie-0924.github.io/blob/4b0fb729346b9192b45810bc2ad481fb388dbaf9/typora-user-images/1640746150554.png?raw=true)
 
 ​	**2、创建并切换到工作目录**
 
@@ -33,13 +33,13 @@ tags: win10 pytorch conda git 深度学习
 
 ​		`cd mmlab`
 
-​		![1640746150554](https://github.com/panie-0924/panie-0924.github.io/blob/4b0fb729346b9192b45810bc2ad481fb388dbaf9/typora-user-images/1640746302743.png)
+​		![1640746150554](https://github.com/panie-0924/panie-0924.github.io/blob/4b0fb729346b9192b45810bc2ad481fb388dbaf9/typora-user-images/1640746302743.png?raw=true)
 
 ​	**3、创建pytorch的conda虚拟环境**
 
 ​		`conda create --mmlabpytorch python=3.6`
 
-​		![1640747018723](https://github.com/panie-0924/panie-0924.github.io/blob/4b0fb729346b9192b45810bc2ad481fb388dbaf9/typora-user-images/1640746584343.png)
+​		![1640747018723](https://github.com/panie-0924/panie-0924.github.io/blob/4b0fb729346b9192b45810bc2ad481fb388dbaf9/typora-user-images/1640746584343.png?raw=true)
 
 ​		后续，输入Y确认安装
 
@@ -47,13 +47,13 @@ tags: win10 pytorch conda git 深度学习
 
 ​		`conda info -e`
 
-​		![1640747018723](https://github.com/panie-0924/panie-0924.github.io/blob/4b0fb729346b9192b45810bc2ad481fb388dbaf9/typora-user-images/1640746996801.png)
+​		![1640747018723](https://github.com/panie-0924/panie-0924.github.io/blob/4b0fb729346b9192b45810bc2ad481fb388dbaf9/typora-user-images/1640747018723.png?raw=true)
 
 ​	**4、启动Pytorch Anaconda虚拟环境**
 
 ​		`activate mmlab`
 
-​		![1640747177011](https://github.com/panie-0924/panie-0924.github.io/blob/4b0fb729346b9192b45810bc2ad481fb388dbaf9/typora-user-images/1640747177011.png)
+​		![1640747177011](https://github.com/panie-0924/panie-0924.github.io/blob/4b0fb729346b9192b45810bc2ad481fb388dbaf9/typora-user-images/1640747177011.png?raw=true)
 
 ​	**5、安装pytorch**
 
@@ -61,7 +61,7 @@ tags: win10 pytorch conda git 深度学习
 
 ​		详细版本可以自己选择：
 
-​		![1640747363531](https://github.com/panie-0924/panie-0924.github.io/blob/4b0fb729346b9192b45810bc2ad481fb388dbaf9/typora-user-images/1640747363531.png)
+​		![1640747363531](https://github.com/panie-0924/panie-0924.github.io/blob/4b0fb729346b9192b45810bc2ad481fb388dbaf9/typora-user-images/1640747363531.png?raw=true)
 
 ​		 `conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch `
 
