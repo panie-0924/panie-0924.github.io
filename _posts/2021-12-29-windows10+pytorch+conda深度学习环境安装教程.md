@@ -67,7 +67,7 @@ tags: win10 pytorch conda git 深度学习
 
 ## 第三步：安装git
 
-​	![1640762599393](https://github.com/panie-0924/panie-0924.github.io/blob/4b0fb729346b9192b45810bc2ad481fb388dbaf9/typora-user-images/1640762599393.png)
+​	![1640762599393](https://github.com/panie-0924/panie-0924.github.io/blob/main/typora-user-images/1640762599393.png?raw=true)
 
 ​		上述界面选择使用vscode作为默认编辑器，其他无脑安装。
 
