@@ -1,6 +1,6 @@
 ---
-title：OpenMMLab开源项目介绍
-tags：MMLab MMCV MMDetection ...
+title: OpenMMLab开源项目介绍
+tags: MMCV MMDetection MMSegmentation ...
 ---
 
 #	OpenMMLab是什么？
