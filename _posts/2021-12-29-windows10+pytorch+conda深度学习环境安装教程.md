@@ -1,6 +1,6 @@
 ---
 title: windows10+pytorch+conda深度学习环境安装教程
-tags: win10 pytorch conda git 深度学习
+tags: win10 pytorch conda git 深度学习 ...
 ---
 
 #	环境介绍
@@ -13,13 +13,17 @@ tags: win10 pytorch conda git 深度学习
 
 ​	**cnoda**：conda是一个环境包，方便用于环境的管理，适用于多种语言，如：python、R、Java、Javascript、C/C++等等。[下载地址](https://www.anaconda.com/products/individual )
 
-​	**git**：用于分布式版本系统的控制管理。在深度学习的过程中，我们会经常用到git上的一些开源项目；并且我们自己的项目也可以放在git上，方便项目管理。[下载地址](https://git-scm.com/downloads )
+​	**git**：用于分布式版本系统的控制管理。在深度学习的过程中，我们会经常用到git上的一些开源项目；并且我们自己的项目也可以放在git上，方便项目管理。[下载地址](https://git-scm.com/downloads )  
+
+
 
 #	安装步骤
 
 ## 第一步：安装conda
 
-​	双击上面提供的安装包，无脑安装；
+​	双击上面提供的安装包，无脑安装；  
+
+
 
 ##	第二步：在conda下安装pytorch
 
